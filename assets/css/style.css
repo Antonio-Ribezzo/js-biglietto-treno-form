@@ -18,6 +18,11 @@
     font-size: 1.5rem;
 }
 
-.list-group-item{
+#price p,
+#price span{
+    font-size: 1.5rem;
+}
+
+.bg-ticket{
     background-color: rgba(0, 0, 0, 0.4);
 }

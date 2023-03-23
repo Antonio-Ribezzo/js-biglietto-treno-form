@@ -20,20 +20,44 @@ function myFunctionGenerate(){
     const kmPrice = 0.21;
     let fullPrice = kmTravel * kmPrice;
 
-    console.log(kmTravel, Minors, Adult, Over, fullPrice);
+    console.log(generalName, kmTravel, Minors, Adult, Over, fullPrice);
 
     if(Minors == true){
         let realPrice = (fullPrice * 0.80).toFixed(2);
         console.log(realPrice);
-        document.getElementById('price').innerHTML = `<span>${realPrice}</span>`
+        document.getElementById('price').innerHTML = `
+        <div class="row py-2">
+            <h2 class="col-12 mb-4">Dettagli Biglietto</h2>
+            <p class="col-12 text-success">Tariffa Young</p>
+            <p class="col-12 col-md-4">Passeggero: <span class="badge rounded-pill text-bg-success">${generalName}</span></p>
+            <p class="col-12 col-md-4">km da percorrere: <span class="badge rounded-pill text-bg-success">${kmTravel}</span></p>
+            <p class="col-12 col-md-4">Costo biglietto: <span class="badge rounded-pill text-bg-success">${realPrice}&euro;</span></p>
+        </div>
+        `
     } else if (Over == true){
         let realPrice = (fullPrice * 0.60).toFixed(2);
         console.log(realPrice);
-        document.getElementById('price').innerHTML = `<span>${realPrice}</span>`
+        document.getElementById('price').innerHTML = `
+       <div class="row py-2">
+            <h2 class="col-12 mb-4">Dettagli Biglietto</h2>
+            <p class="col-12 text-danger">Tariffa Over</p>
+            <p class="col-12 col-md-4">Passeggero: <span class="badge rounded-pill text-bg-success">${generalName}</span></p>
+            <p class="col-12 col-md-4">km da percorrere: <span class="badge rounded-pill text-bg-success">${kmTravel}</span></p>
+            <p class="col-12 col-md-4">Costo biglietto: <span class="badge rounded-pill text-bg-success">${realPrice}&euro;</span></p>
+        </div>
+        `
     } else{
         let realPrice = (fullPrice).toFixed(2);
         console.log(realPrice);
-        document.getElementById('price').innerHTML = `<span>${realPrice}</span>`
+        document.getElementById('price').innerHTML = `
+        <div class="row py-2">
+            <h2 class="col-12 mb-4">Dettagli Biglietto</h2>
+            <p class="col-12 text-warning">Tariffa Standard</p>
+            <p class="col-12 col-md-4">Passeggero: <span class="badge rounded-pill text-bg-success">${generalName}</span></p>
+            <p class="col-12 col-md-4">km da percorrere: <span class="badge rounded-pill text-bg-success">${kmTravel}</span></p>
+            <p class="col-12 col-md-4">Costo biglietto: <span class="badge rounded-pill text-bg-success">${realPrice}&euro;</span></p>
+        </div>
+        `
     }
 }
 
