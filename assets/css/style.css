@@ -1,0 +1,23 @@
+*{
+    font-family: 'Comic Neue', cursive;
+}
+
+#container-0{
+    background-color: antiquewhite;
+}
+
+#card{
+    background-color: rgba(0, 0, 0, 0.312);
+}
+
+#main-text h1{
+    font-size: 3rem;
+}
+
+#main-text p{
+    font-size: 1.5rem;
+}
+
+.list-group-item{
+    background-color: rgba(0, 0, 0, 0.4);
+}
