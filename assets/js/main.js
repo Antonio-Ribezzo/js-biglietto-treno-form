@@ -10,7 +10,8 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 
 
-function myFunction(){
+function myFunctionGenerate(){
+    let generalName = document.getElementById('generalName').value
     let kmTravel = document.getElementById('kilometres').value;
 
     let Minors = document.getElementById('minors').checked;
@@ -34,4 +35,8 @@ function myFunction(){
         console.log(realPrice);
         document.getElementById('price').innerHTML = `<span>${realPrice}</span>`
     }
+}
+
+function myFunctionClear(){
+    document.getElementById('form').reset();
 }
